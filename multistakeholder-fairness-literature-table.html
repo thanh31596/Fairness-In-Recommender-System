@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Stakeholder Fairness Literature Review</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            color: #7f8c8d;
+            margin-bottom: 30px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+        }
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        tr:hover {
+            background-color: #f8f9fa;
+        }
+        .year {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        .contribution {
+            color: #27ae60;
+        }
+        .gap {
+            color: #e74c3c;
+        }
+        .relevance {
+            color: #8e44ad;
+        }
+        .category-header {
+            background-color: #34495e;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+        }
+        .domain-specific {
+            background-color: #f0f8ff;
+        }
+        .technical-approach {
+            background-color: #f0fff0;
+        }
+        .survey-paper {
+            background-color: #fffaf0;
+        }
+        @media (max-width: 768px) {
+            table {
+                font-size: 12px;
+            }
+            th, td {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Multi-Stakeholder Fairness in Recommender Systems</h1>
+        <p class="subtitle">Literature Review (2019-2025) - Key Papers and Research Gaps</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th width="15%">Authors & Year</th>
+                    <th width="20%">Title/Focus</th>
+                    <th width="25%">Key Contributions</th>
+                    <th width="20%">Research Gaps/Limitations</th>
+                    <th width="20%">Relevance to Generative Agents</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="5" class="category-header">FOUNDATIONAL PAPERS</td>
+                </tr>
+                <tr>
+                    <td><span class="year">Burke et al. (2017)</span></td>
+                    <td>Multisided Fairness for Recommendation</td>
+                    <td class="contribution">• Introduced multi-stakeholder perspective<br>• Defined C-fairness and P-fairness<br>• Established theoretical framework</td>
+                    <td class="gap">• Static stakeholder models<br>• Limited behavioral complexity<br>• No dynamic preference modeling</td>
+                    <td class="relevance">• Foundation for multi-role agent design<br>• Framework needs extension for agent memory and learning</td>
+                </tr>
+                <tr>
+                    <td><span class="year">Abdollahpouri & Burke (2019)</span></td>
+                    <td>Multi-stakeholder Recommendation and its Connection to Multi-sided Fairness</td>
+                    <td class="contribution">• Comprehensive taxonomy: C-Fairness, P-Fairness, Platform fairness<br>• Formal problem definition<br>• Survey of early approaches</td>
+                    <td class="gap">• Simplified utility functions<br>• No stakeholder interaction modeling<br>• Static preference assumptions</td>
+                    <td class="relevance">• Taxonomy can guide agent role design<br>• Need agents to model complex utilities</td>
+                </tr>
+                
+                <tr>
+                    <td colspan="5" class="category-header">MULTI-OBJECTIVE OPTIMIZATION APPROACHES</td>
+                </tr>
+                <tr class="technical-approach">
+                    <td><span class="year">Wu et al. (2022)</span></td>
+                    <td>Multi-FR: Multi-Objective Optimization Framework</td>
+                    <td class="contribution">• Joint user-item fairness optimization<br>• Pareto-efficient solutions<br>• 7-20% precision improvement</td>
+                    <td class="gap">• Fixed objective functions<br>• No adaptation to user feedback<br>• Limited to two stakeholder types</td>
+                    <td class="relevance">• Agents could learn objective functions<br>• Simulate feedback loops</td>
+                </tr>
+                <tr class="technical-approach">
+                    <td><span class="year">Lin et al. (2022)</span></td>
+                    <td>CP-FairRank Algorithm</td>
+                    <td class="contribution">• Constrained optimization approach<br>• 19-28% provider exposure gains<br>• Maintains recommendation quality</td>
+                    <td class="gap">• Assumes known constraints<br>• No strategic behavior modeling<br>• Static fairness definitions</td>
+                    <td class="relevance">• Agents could discover constraints<br>• Model constraint gaming</td>
+                </tr>
+                
+                <tr>
+                    <td colspan="5" class="category-header">BEHAVIORAL AND SIMULATION STUDIES</td>
+                </tr>
+                <tr>
+                    <td><span class="year">Zhang et al. (2020)</span></td>
+                    <td>Agent-Based Simulation Framework for RS Dynamics</td>
+                    <td class="contribution">• Longitudinal performance paradox<br>• Agent-based modeling approach<br>• Consumption dynamics</td>
+                    <td class="gap">• Basic agent behaviors<br>• No memory or learning<br>• Limited social influence</td>
+                    <td class="relevance">• Direct predecessor to generative agents<br>• Framework to extend with LLMs</td>
+                </tr>
+                <tr>
+                    <td><span class="year">Mansoury et al. (2020)</span></td>
+                    <td>Popularity Bias in Multi-stakeholder Systems</td>
+                    <td class="contribution">• Multi-stakeholder bias analysis<br>• Feedback loop identification<br>• Bias amplification effects</td>
+                    <td class="gap">• No bias mitigation strategies<br>• Limited stakeholder agency<br>• Static analysis only</td>
+                    <td class="relevance">• Agents could simulate bias evolution<br>• Test mitigation strategies</td>
+                </tr>
+                
+                <tr>
+                    <td colspan="5" class="category-header">DOMAIN-SPECIFIC APPLICATIONS</td>
+                </tr>
+                <tr class="domain-specific">
+                    <td><span class="year">Various (2023-2024)</span></td>
+                    <td>Tourism Recommender Systems</td>
+                    <td class="contribution">• Tourist-provider-platform triangle<br>• Sustainability considerations<br>• Cultural fairness aspects</td>
+                    <td class="gap">• Domain-specific only<br>• No cross-domain insights<br>• Limited stakeholder diversity</td>
+                    <td class="relevance">• Test domain transfer<br>• Model cultural preferences</td>
+                </tr>
+                <tr class="domain-specific">
+                    <td><span class="year">Raj & Ekstrand (2024)</span></td>
+                    <td>Healthcare Fairness Perspectives</td>
+                    <td class="contribution">• Patient-provider-insurer dynamics<br>• Regulatory compliance needs<br>• Health equity considerations</td>
+                    <td class="gap">• No patient behavior modeling<br>• Static compliance rules<br>• Limited outcome tracking</td>
+                    <td class="relevance">• Simulate patient journeys<br>• Model regulatory adaptation</td>
+                </tr>
+                <tr class="domain-specific">
+                    <td><span class="year">Sühr et al. (2023)</span></td>
+                    <td>Recruitment Domain Fairness</td>
+                    <td class="contribution">• Legal compliance framework<br>• Candidate-employer fairness<br>• Anti-discrimination focus</td>
+                    <td class="gap">• No strategic applicant behavior<br>• Limited long-term effects<br>• Static job market model</td>
+                    <td class="relevance">• Model strategic applications<br>• Simulate market dynamics</td>
+                </tr>
+                
+                <tr>
+                    <td colspan="5" class="category-header">RECENT SURVEYS AND FRAMEWORKS</td>
+                </tr>
+                <tr class="survey-paper">
+                    <td><span class="year">Deldjoo et al. (2023)</span></td>
+                    <td>Fairness in RS: Research Landscape</td>
+                    <td class="contribution">• Comprehensive survey<br>• Future research directions<br>• 200+ papers analyzed</td>
+                    <td class="gap">• Limited on behavioral aspects<br>• No simulation discussion<br>• Static fairness focus</td>
+                    <td class="relevance">• Identifies gaps agents could fill<br>• Framework for agent evaluation</td>
+                </tr>
+                <tr class="survey-paper">
+                    <td><span class="year">Li et al. (2023)</span></td>
+                    <td>Survey on Multi-objective RS</td>
+                    <td class="contribution">• Multi-objective taxonomy<br>• Algorithm comparison<br>• Evaluation metrics</td>
+                    <td class="gap">• No stakeholder modeling<br>• Limited dynamic aspects<br>• Algorithm-centric view</td>
+                    <td class="relevance">• Agents as objective discoverers<br>• Dynamic metric validation</td>
+                </tr>
+                <tr class="survey-paper">
+                    <td><span class="year">Wang et al. (2023)</span></td>
+                    <td>Fairness-aware RS Survey</td>
+                    <td class="contribution">• Individual vs group fairness<br>• Impossibility results<br>• Practical trade-offs</td>
+                    <td class="gap">• Theoretical focus<br>• No behavioral validation<br>• Limited practical guidance</td>
+                    <td class="relevance">• Agents to explore impossibility<br>• Find practical compromises</td>
+                </tr>
+                
+                <tr>
+                    <td colspan="5" class="category-header">EMERGING APPROACHES (2024-2025)</td>
+                </tr>
+                <tr>
+                    <td><span class="year">Chen et al. (2024)</span></td>
+                    <td>Deep Learning Multi-view Stakeholder Systems</td>
+                    <td class="contribution">• Multi-view embeddings<br>• Preference aggregation<br>• Neural stakeholder models</td>
+                    <td class="gap">• Black-box behaviors<br>• No interpretability<br>• Limited adaptability</td>
+                    <td class="relevance">• Combine with agent explainability<br>• Interpretable behaviors</td>
+                </tr>
+                <tr>
+                    <td><span class="year">Various (2024)</span></td>
+                    <td>Provider-Centric Fairness Metrics</td>
+                    <td class="contribution">• Provider perspective emphasis<br>• New fairness metrics<br>• Empirical validations</td>
+                    <td class="gap">• Single stakeholder focus<br>• No negotiation modeling<br>• Static provider strategies</td>
+                    <td class="relevance">• Multi-perspective agents<br>• Negotiation simulations</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div style="margin-top: 30px; padding: 20px; background-color: #ecf0f1; border-radius: 8px;">
+            <h3 style="color: #2c3e50;">Key Insights from Literature Analysis</h3>
+            <ul style="color: #34495e;">
+                <li><strong>Evolution:</strong> Field has progressed from single to multi-stakeholder perspectives, but behavioral complexity remains limited</li>
+                <li><strong>Technical Focus:</strong> Heavy emphasis on optimization algorithms, less on stakeholder behavior and dynamics</li>
+                <li><strong>Static Assumptions:</strong> Most work assumes fixed preferences, utilities, and roles</li>
+                <li><strong>Validation Gap:</strong> Limited behavioral validation of fairness mechanisms</li>
+                <li><strong>Opportunity:</strong> Generative agents can address all major limitations through realistic behavioral simulation</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
