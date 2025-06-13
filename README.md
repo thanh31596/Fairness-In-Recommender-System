@@ -24,3 +24,6 @@ To accomplish the above goal, the study will address several key research questi
      By answering RQ2, we expect to catalog a range of emergent phenomena – such as *preference drift, social contagion of choices, competitive provider behavior,* or *provider–platform conflicts* – and explicitly link them to fairness metrics or violations. This will reveal **which fairness issues are inherently driven by stakeholder behavior**, complementing the static view provided by traditional metrics.
 
 
+2. How can generative agent simulations model realistic negotiation processes between stakeholders with asymmetric information, and what do these simulations reveal about effective communication protocols or mediation mechanisms for resolving fairness conflicts?
+
+
